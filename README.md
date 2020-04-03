@@ -1,4 +1,4 @@
-#PARTICLE CLOUD FUNCTION TRAFFIC LIGHT CONTROL - README
+#SIT210 Task 4.2HD Particle Cloud Function - README
 
 This project utilises the Particle.function() call to remotely control LED's from a webpage. It will mimick the scenario that you are required to create a program that allows you to manually control a set of traffic lights in a remote area. To complete this, you will need a Particle Argon device, knowledge of how to use Particle.function() (you can learn about this here: https://docs.particle.io/reference/device-os/firmware/photon/ ), you will need to download and read about the Particle CLI (https://docs.particle.io/reference/developer-tools/cli/) and have knowledge of how to create a basic HTML webpage. There is documentation on how to build a basic version of this project on the Particle website that you can find by searching for Particle Argon Hardware Examples, or via https://docs.particle.io/tutorials/hardware-projects/hardware-examples/argon/
 
