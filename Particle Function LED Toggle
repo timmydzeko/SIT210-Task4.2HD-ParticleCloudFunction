@@ -1,0 +1,108 @@
+/*
+------------------------------------------------------
+Remote Traffic Light System - Created By Timothy Moore
+------------------------------------------------------
+To be used with ledToggle.html webpage. See README 
+document for details of the project.
+*/
+
+//  LED pin calls
+int ledRed = D2;
+int ledYellow = D4;
+int ledGreen = D6;
+
+
+void setup() {
+    
+    //  Sets LED pins as OUTPUT
+    pinMode(ledRed, OUTPUT);
+    pinMode(ledYellow, OUTPUT);
+    pinMode(ledGreen, OUTPUT);
+    
+    //  Creates a Particle Cloud Function for each light
+    Particle.function("Red", redToggle);
+    Particle.function("Yellow", yellowToggle);
+    Particle.function("Green", greenToggle);
+    
+    //  Initialises all LED's as turned off
+    digitalWrite(ledRed, LOW);
+    digitalWrite(ledYellow, LOW);
+    digitalWrite(ledGreen, LOW);
+}
+
+void loop() {
+
+}
+
+/*
+The next three functions takes a command from the HTML webpage
+that will eitehr set the light as on or off. This could have 
+been made in one function, the downside would be that only one 
+light could be toggled at a time.
+*/
+int redToggle(String command)
+{
+    if (command == "on")
+    {
+        digitalWrite(ledRed, HIGH);
+        return 1;
+        
+    }
+    
+    else if (command == "off")
+    {
+        digitalWrite(ledRed, LOW);
+        return 0;
+    }
+    
+    else
+    {
+        return -1;
+    }
+    
+}
+
+
+int yellowToggle(String command)
+{
+    if (command == "on")
+    {
+        digitalWrite(ledYellow, HIGH);
+        return 1;
+        
+    }
+    
+    else if (command == "off")
+    {
+        digitalWrite(ledYellow, LOW);
+        return 0;
+    }
+    
+    else
+    {
+        return -1;
+    }
+    
+}
+
+int greenToggle(String command)
+{
+    if (command == "on")
+    {
+        digitalWrite(ledGreen, HIGH);
+        return 1;
+        
+    }
+    
+    else if (command == "off")
+    {
+        digitalWrite(ledGreen, LOW);
+        return 0;
+    }
+    
+    else
+    {
+        return -1;
+    }
+    
+}
