@@ -1,0 +1,47 @@
+
+<!DOCTYPE>
+<html>
+	<body>
+	<center>
+	<br>
+	<br>
+	<br>
+	<style>
+		.hide { position:absolute; top:-1px; height:1px; }
+	</style>
+	<iframe name="hiddenFrame" class="hide"></iframe>
+	<form target="hiddenFrame" action="https://api.particle.io/v1/devices/e00fce68e1979f4d857b2782/Red?access_token=7a90da52bcb32a2fe25202b37bdc3b6ac8a5a12a" method="POST">
+		Toggle the Red Light!<br>
+		<br>
+		<input type="radio" name="arg" value="on">Turn the red LED on.
+		<br>
+		<input type="radio" name="arg" value="off">Turn the red LED off.
+		<br>
+		<br>
+		<input type="submit" value="Do it!">
+	</form>
+	<br>
+	<form target="hiddenFrame" action="https://api.particle.io/v1/devices/e00fce68e1979f4d857b2782/Yellow?access_token=efe819bd52cf887b6e17cc9b2e992dcce2a414d1" method="POST">
+		Toggle the Yellow Light!<br>
+		<br>
+		<input type="radio" name="arg" value="on">Turn the yellow LED on.
+		<br>
+		<input type="radio" name="arg" value="off">Turn the yellow LED off.
+		<br>
+		<br>
+		<input type="submit" value="Do it!">
+	</form>
+	<br>
+	<form target="hiddenFrame" action="https://api.particle.io/v1/devices/e00fce68e1979f4d857b2782/Green?access_token=2e346a0d2a0a441c6efc7499854074b2901f2765" method="POST">
+		Toggle the Green Light!<br>
+		<br>
+		<input type="radio" name="arg" value="on">Turn the green LED on.
+		<br>
+		<input type="radio" name="arg" value="off">Turn the green LED off.
+		<br>
+		<br>
+		<input type="submit" value="Do it!">
+	</form>
+	</center>
+	</body>
+</html>
